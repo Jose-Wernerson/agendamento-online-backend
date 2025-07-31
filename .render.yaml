@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: nome-do-seu-servico
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT src.main:app
